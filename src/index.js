@@ -66,7 +66,7 @@ function formatData(value, byteLength) {
   var outputByteLength = 0; // eslint-disable-line
 
   if (output.startsWith('atx') || output.startsWith('atp')) {
-    return output
+    return output;
   }
 
   // prefix only under strict conditions, else bypass
