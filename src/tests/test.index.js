@@ -350,7 +350,7 @@ describe('test ethjs-format object', () => {
       assert.equal(decodedObject.transactions[1].input, '0x603880600c6000396000f300603880600c6000396000f3603880600c6000396000f360');
     });
 
-    /*it('should encode Filter object normally', () => {
+    it('should encode Filter object normally', () => {
       const decodedFilterObject = {
         fromBlock: 89886779,
         toBlock: 'latest',
@@ -363,7 +363,7 @@ describe('test ethjs-format object', () => {
       assert.equal(encodedObject.fromBlock, '0x55B903B'.toLowerCase());
       assert.equal(encodedObject.toBlock, 'latest');
       assert.equal(Array.isArray(encodedObject.topics), true);
-    });*/
+    });
 
     it('should decode send transaction object normally', () => {
       const encodedSendTransactionObject = {

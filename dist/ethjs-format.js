@@ -6314,6 +6314,10 @@ function formatData(value, byteLength) {
   var output = value; // eslint-disable-line
   var outputByteLength = 0; // eslint-disable-line
 
+  if (value != null && typeof output === 'string' && (output.startsWith('atx') || output.startsWith('atp'))) {
+    return output;
+  }
+
   // prefix only under strict conditions, else bypass
   if (typeof value === 'string') {
     output = '0x' + padToEven(stripHexPrefix(value));

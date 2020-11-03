@@ -65,7 +65,7 @@ function formatData(value, byteLength) {
   var output = value; // eslint-disable-line
   var outputByteLength = 0; // eslint-disable-line
 
-  if (output.startsWith('atx') || output.startsWith('atp')) {
+  if (value != null && typeof output === 'string' && (output.startsWith('atx') || output.startsWith('atp'))) {
     return output;
   }
 
